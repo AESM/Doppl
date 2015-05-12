@@ -1,0 +1,23 @@
+humans.txt
+
+!++++ AUTHOR
++=======================================================================+!
+    Developer & Designer: Ali Esmaili
+    Email: AESM85@gmail.com
+    LinkedIn: https://www.linkedin.com/in/SuitAndCape
+    GitHub: https://github.com/AESM
+    Website: http://SuitAndCape.github.io/
+    Twitter: @SuitAndCape
+    Location: Bay Area
+
+!++++ THANKS
++=======================================================================+!
+
+  !+===== TEAM =====+!
+
+!++++ SITE
++=======================================================================+!
+    Last update: 2015/05/07
+    Language: English
+    Doctype: HTML5
+    IDE: Sublime Text, Illustrator, Photoshop
