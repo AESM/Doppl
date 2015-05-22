@@ -3,32 +3,136 @@
 SCHEMA OUTLINE
 ==========================================================================
 
-- user
-  - users
+## user/users
 
+### Relationships
+
+#### has_many
+- connections
+- updates
+- replies
+- alerts
+- scrapbooks
+- pictures
+- approvals
+- disapprovals
+
+#### has_one
 - profile
-  - profiles
 
-- main_picture
-  - main_pictures
 
-- connection
-  - connections
+## profile/profiles
 
-- post
-  - posts
+### Relationships
 
-- reply
-  - replies
+#### has_one
+- profilePhoto
 
-- notification
-  - notifications
+#### belongs_to
+- user
 
-- album
-  - albums
 
-- approval
-  - approvals
+## profilePhoto/profilePhotos
 
-- disapproval
-  - disapprovals
+### Relationships
+
+#### belongs_to
+- profile
+
+#### photo_uploader
+- photo
+
+
+## connection/connections
+
+### Relationships
+
+#### belongs_to
+- user
+  - requester
+- user
+  - receiver
+
+
+## update/updates
+
+### Relationships
+
+#### has_many
+- replies
+- approvals
+- disapprovals
+
+#### belongs_to
+- user
+  - writer
+- user
+  - reader
+
+
+## reply/replies
+
+### Relationships
+
+#### has_many
+- approvals
+- disapprovals
+
+#### belongs_to
+- user
+  - commentator
+- update
+- picture
+
+
+## alert/alerts
+
+### Relationships
+
+#### belongs_to
+- user
+
+
+## scrapbook/scrapbooks
+
+### Relationships
+
+#### has_many
+- pictures
+
+#### belongs_to
+- user
+
+
+## picture/pictures
+
+### Relationships
+
+#### has_many
+- replies
+- approvals
+- disapprovals
+
+#### belongs_to
+- scrapbook
+
+#### picture_uploader
+- picture
+
+
+## approval/approvals
+
+### Relationships
+
+#### belongs_to
+- user
+  - admirer
+
+
+## disapproval/disapprovals
+
+### Relationships
+
+#### belongs_to
+- user
+  - admirer
