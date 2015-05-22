@@ -44,8 +44,12 @@ gem 'draper', '~> 2.1.0'
 gem 'devise', '~> 3.4.1'
 ## Simple, Heroku Rails app config using ENV and a single YAML file
 gem 'figaro', '~> 1.1.1'
+## The Ruby cloud services library, supporting all major cloud providers
+gem 'fog', '1.30.0'
 ## Font-Awesome icons and SCSS stylesheets as an asset pipeline engine
 gem 'font-awesome-sass-rails'
+## Use Foundation in Rails apps
+gem 'foundation-rails', '~> 5.5.2.1'
 ## Integrates Foundation's pagination styles with will_paginate
 gem 'will_paginate-foundation'
 ## A templating engine designed to make writing HTML documents easier
@@ -83,10 +87,16 @@ group :development, :test do
   ## Allows quick definition of prototypes for each model and requests
   #for instances with properties that are important to the test at hand
   gem 'factory_girl_rails', '~> 4.5.0'
+  ## Automatically launches spec tests when files are modified
+  gem 'guard-rspec', '~> 4.5.0'
+  ## FSEvents API with Signals catching
+  gem 'rb-fsevent' if `uname` =~ /Darwin/
   ## The RSpec testing framework for Rails 3.x and 4.x
   gem 'rspec-rails', '~> 3.2.1'
   ## Automated testing that mimics user-interaction
 # #   gem 'selenium-webdriver', '~> 2.45.0'
+  ## Implements the rspec command for Spring
+  gem 'spring-commands-rspec', '~> 1.0.4'
   ## Access IRB console on exception pages and <%= console %> in views
 # #   gem 'web-console', '~> 2.0'
 end
