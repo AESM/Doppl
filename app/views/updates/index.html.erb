@@ -1,0 +1,46 @@
+
+<% if user_signed_in? %>
+  <h2>Update Feed</h2>
+  <hr>
+
+  <div class="update">
+  <% @updates.each do |u| %>
+    <div class="update-topper panel">
+      <h5><%= u.user.profile_name %>:</h5>
+      <p class="panel callout radius"><%= u.content %></p>
+    </div>
+
+    <div class="options button-bar">
+      <ul class="button-group">
+        <li class="callout button tiny round">
+          <%= link_to "Posted " + time_ago_in_words(u.created_at) + " ago", u %>
+        </li>
+        <li class="admin button tiny round">
+          <%= link_to 'Edit', edit_update_path(u) %>
+        </li>
+        <li class="admin button tiny round">
+          <%= link_to 'Destroy', u, method: :DELETE, data: { confirm: 'Are you sure?' } %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+  </div>
+
+  <br><br><br>
+
+  <div class="button tiny round">
+    <%= link_to 'Post New Update', new_update_path %>
+  </div>
+
+<% else %>
+
+  <br>
+  <div class="row">
+    <div class="button large radius small-centered columns">
+      <%= link_to "Sign In", new_user_session_path %>
+    </div>
+    <div class="button large radius small-centered columns">
+      <%= link_to "Join Us", new_user_registration_path %>
+    </div>
+  </div>
+<% end %>

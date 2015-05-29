@@ -1,0 +1,23 @@
+
+<%- content_for :header do %>
+   <%= render "devise/shared/login" %>
+<% end %>
+
+<div class="authform">
+  <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :role => 'form'}) do |f| %>
+  <h3>Forgot your password?</h3>
+  <p>We'll send password reset instructions.</p>
+
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.input :email, required: true, autofocus: true, class: 'form-control' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Send me reset password instructions", :class => 'button right' %>
+  </div>
+  <% end %>
+</div>
+
+<%= render "devise/shared/links" %>

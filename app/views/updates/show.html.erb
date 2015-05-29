@@ -1,0 +1,27 @@
+
+<p>
+  <strong><%= @update.user.profile_name %></strong> –
+  <em><%= @update.user.full_name %></em>:
+  <%= time_ago_in_words(@update.created_at) + " ago" %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @update.content %>
+</p>
+
+<div class="button-bar">
+  <ul class="button-group">
+    <li class="button tiny round">
+      <%= link_to 'Back', updates_path %>
+    </li>
+    <% if signed_in? && @update.user == current_user %>
+    <li class="button tiny round">
+      <%= link_to 'Edit', edit_update_path(@update) %>
+    </li>
+    <li class="button tiny round">
+      <%= link_to 'Destroy', @update, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+    <% end %>
+  </ul>
+</div>

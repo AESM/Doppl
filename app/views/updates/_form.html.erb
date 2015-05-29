@@ -1,0 +1,25 @@
+
+<div class="authform">
+  <%= simple_form_for(@update) do |f| %>
+    <% if @update.errors.any? %>
+      <div id="error_explanation">
+        <h3><%= pluralize(@update.errors.count, "error") %> prohibited this update from being saved:</h3>
+
+        <ul>
+        <% @update.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.input :user_id, collection: User.all, label_method: :full_name %>
+      <%= f.input :content %>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Update", :class => 'button success radius right' %>
+    </div>
+  <% end %>
+</div>
+

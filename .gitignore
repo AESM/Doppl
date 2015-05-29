@@ -6,9 +6,14 @@
 
 # Ignore bundler config.
 /.bundle
+/public/system
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /log/*.log
 !/log/.keep
 /tmp
+
+# Ignore local configuration.
+.DS_Store
+/bin

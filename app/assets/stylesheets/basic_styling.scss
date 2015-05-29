@@ -1,0 +1,117 @@
+
+//// All lumped together for MVP
+//// Will be stripped when implementing React
+
+@import 'foundation';
+
+.top-bar .name {
+  font-size: rem-calc(13);
+  line-height: 45px;
+}
+
+.top-bar .name a {
+  font-weight: normal;
+  color: lightgray;
+  padding: 0 15px;
+}
+
+@mixin twelve-columns {
+  @extend .small-12;
+  @extend .columns;
+}
+
+@mixin six-columns-centered {
+  @extend .small-6;
+  @extend .columns;
+  @extend .text-center;
+}
+
+.column {
+  @include six-columns-centered;
+}
+
+.form {
+  @include grid-column(6);
+}
+
+.form-centered {
+  @include six-columns-centered;
+}
+
+.submit {
+  @extend .button;
+  @extend .radius;
+}
+
+main {
+  @include twelve-columns;
+  background-color: #0E0E;
+}
+
+section {
+  @extend .row;
+  margin-top: 20px;
+}
+
+.authform {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.authform form {
+  @include panel();
+  padding-bottom: 60px;
+}
+
+.authform form a {
+  font-size: rem-calc(13);
+}
+
+.authform form p {
+  font-size: rem-calc(13);
+}
+
+.authform fieldset {
+  @include panel();
+}
+
+.authform #error_explanation:not(:empty) {
+  @extend .alert-box;
+  @extend .alert;
+}
+
+.authform #error_explanation h2 {
+  font-size: rem-calc(16);
+  color: lightgray;
+}
+
+.button-xs {
+  @extend .button;
+  @extend .radius;
+  @extend .tiny;
+}
+
+.form-actions {
+
+  &.checkbox {
+    width: 150px;
+  }
+
+  .gender {
+
+    &.radio-buttons {
+      display: inline-block;
+    }
+
+  }
+
+}
+
+.update-topper {
+  margin-top: 30px;
+}
+
+.copyright {
+  list-style-type: none;
+}

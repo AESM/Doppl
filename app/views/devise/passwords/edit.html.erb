@@ -1,0 +1,24 @@
+
+<%- content_for :header do %>
+   <%= render "devise/shared/login" %>
+<% end %>
+
+<div class="authform">
+  <%= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  <h3>Change your password</h3>
+
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="form-group">
+    <%= f.input :password, label: "New password", required: true, autofocus: true, autocomplete: 'off', class: 'form-control' %>
+    <%= f.input :password_confirmation, label: "Confirm your new password", required: true, autocomplete: 'off', class: 'form-control' %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Change my password", :class => 'button right' %>
+  </div>
+  <% end %>
+</div>
+
+<%= render "devise/shared/links" %>

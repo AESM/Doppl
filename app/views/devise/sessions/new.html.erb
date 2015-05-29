@@ -1,0 +1,36 @@
+
+<div class="signin">
+<% provide(:title, 'Sign in') %>
+  <div class="authform loginform">
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :id => 'login-form'}) do |f| %>
+      <h3>Sign in</h3>
+      <%= devise_error_messages! %>
+
+      <div class="form-group">
+        <%= f.input :email, :required => true, :autofocus => true, class: 'form-control' %>
+
+        <%= f.input :password, :required => true, :autocomplete => 'off', class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%- if devise_mapping.recoverable? %>
+          <%= link_to "Forgot password?", new_password_path(resource_name), class: 'right' %>
+        <% end -%>
+      </div>
+
+      <div class="form-actions">
+        <% if devise_mapping.rememberable? -%>
+          <div class="checkbox">
+            <label>
+              <%= f.input_field :remember_me, :as => :boolean, :boolean_style => :inline, :inline_label => "Remember Me" %> Remember me
+            </label>
+          </div>
+        <% end -%>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit 'Sign in', :class => 'button right' %>
+      </div>
+    <% end %>
+  </div>
+</div>
