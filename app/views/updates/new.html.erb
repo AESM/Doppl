@@ -1,8 +1,12 @@
 
-<h2>Write New Update</h2>
+<div class="write-update">
+  <h2>Write New Update</h2>
+  <hr>
 
-<%= render "form" %>
+  <div class="button tiny round">
+    <%= link_to "Back", updates_path %>
+  </div>
 
-<div class="button tiny round">
-  <%= link_to "Back", updates_path %>
+  <%= render "form" %>
+
 </div>

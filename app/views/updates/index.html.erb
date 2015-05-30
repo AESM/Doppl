@@ -1,7 +1,12 @@
 
+<div class="home-updates">
 <% if user_signed_in? %>
   <h2>Update Feed</h2>
   <hr>
+
+  <div class="button tiny round">
+    <%= link_to "Post New Update", new_update_path %>
+  </div>
 
   <div class="update">
     <% @updates.each do |u| %>
@@ -28,12 +33,6 @@
     <% end %>
   </div>
 
-  <br><br><br>
-
-  <div class="button tiny round">
-    <%= link_to "Post New Update", new_update_path %>
-  </div>
-
 <% else %>
 
   <br>
@@ -46,3 +45,4 @@
     </div>
   </div>
 <% end %>
+</div>

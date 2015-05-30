@@ -1,29 +1,34 @@
 
-<div class="update">
-  <div class="update-topper panel">
-  <h5><%= @update.user.profile_name %> –
-  <em><%= @update.user.full_name %></em>:</h5>
-  <%= "Posted " + time_ago_in_words(@update.created_at) + " ago" %>
+<div class="show-update">
+<% if user_signed_in? %>
+  <h2>Show Update</h2>
+  <hr>
 
-  <p class="panel callout radius"><%= @update.content %></p>
+  <div class="button tiny round">
+    <%= link_to "Back", updates_path %>
   </div>
+
+  <div class="update">
+    <div class="update-topper panel">
+    <h5><%= @update.user.profile_name %> –
+    <em><%= @update.user.full_name %></em>:</h5>
+    <%= "Posted " + time_ago_in_words(@update.created_at) + " ago" %>
+
+    <p class="panel callout radius"><%= @update.content %></p>
+    </div>
+  </div>
+
+  <div class="options">
+    <ul class="ops sub-nav">
+      <% if signed_in? && @update.user == current_user %>
+      <li class="admin secondary label radius">
+        <%= link_to "Edit", edit_update_path(@update) %>
+      </li>
+      <li class="admin alert label radius">
+        <%= link_to "Destroy", @update, method: :delete, data: { confirm: "Are you sure?" } %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 </div>
-
-<div class="button-bar">
-  <ul class="button-group">
-    <li class="button tiny round">
-      <%= link_to "Back", updates_path %>
-    </li>
-    <% if signed_in? && @update.user == current_user %>
-    <li class="button tiny round">
-      <%= link_to "Edit", edit_update_path(@update) %>
-    </li>
-    <li class="button tiny round">
-      <%= link_to "Destroy", @update, method: :delete, data: { confirm: "Are you sure?" } %>
-    </li>
-    <% end %>
-  </ul>
-</div>
-
-
-
