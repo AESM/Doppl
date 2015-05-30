@@ -2,11 +2,11 @@
 <div class="authform profileedit">
   <h3>Edit <%= resource_name.to_s.humanize %></h3>
 
-  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => "form"}) do |f| %>
   <%= devise_error_messages! %>
 
     <div class="form-group">
-      <%= f.input :email, required: false, :autofocus => true, class: 'form-control' %>
+      <%= f.input :email, required: false, :autofocus => true, class: "form-control" %>
 
       <%- if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -17,20 +17,20 @@
       <p>Leave these fields blank if you don't want to change your password.</p>
 
       <div class="form-group">
-        <%= f.input :password, autocomplete: "off", required: false, class: 'form-control' %>
-        <%= f.input :password_confirmation, required: false, class: 'form-control' %>
+        <%= f.input :password, autocomplete: "off", required: false, class: "form-control" %>
+        <%= f.input :password_confirmation, required: false, class: "form-control" %>
       </div>
     </fieldset>
 
     <fieldset>
       <p>You must enter your current password to make changes.</p>
       <div class="form-group">
-        <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, class: 'form-control' %>
+        <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, class: "form-control" %>
       </div>
     </fieldset>
 
     <div class="form-actions">
-      <%= f.button :submit, "Update", :class => 'button radius right' %>
+      <%= f.button :submit, "Update", :class => "button radius right" %>
     </div>
   <% end %>
 </div>
@@ -41,7 +41,7 @@
     <fieldset>
       <p>Unhappy?  We'll be sad to see you go.</p>
       <div class="form-actions">
-      <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button alert radius right' %>
+      <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "button alert radius right" %>
       </div>
     </fieldset>
   </div>

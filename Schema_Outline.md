@@ -7,7 +7,7 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### has_many
+##### has_many
 - connections
 - updates
 - replies
@@ -17,7 +17,7 @@ SCHEMA OUTLINE
 - approvals
 - disapprovals
 
-#### has_one
+##### has_one
 - profile
 
 
@@ -25,10 +25,10 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### has_one
+##### has_one
 - profilePhoto
 
-#### belongs_to
+##### belongs_to
 - user
 
 
@@ -36,10 +36,10 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### belongs_to
+##### belongs_to
 - profile
 
-#### photo_uploader
+##### photo_uploader
 - photo
 
 
@@ -47,7 +47,7 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### belongs_to
+##### belongs_to
 - user
   - requester
 - user
@@ -58,12 +58,12 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### has_many
+##### has_many
 - replies
 - approvals
 - disapprovals
 
-#### belongs_to
+##### belongs_to
 - user
   - writer
 - user
@@ -74,22 +74,22 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### has_many
+##### has_many
 - approvals
 - disapprovals
 
-#### belongs_to
+##### belongs_to
 - user
   - commentator
 - update
 - picture
 
 
-## alert/alerts
+## tiding/tidings
 
 ### Relationships
 
-#### belongs_to
+##### belongs_to
 - user
 
 
@@ -97,10 +97,10 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### has_many
+##### has_many
 - pictures
 
-#### belongs_to
+##### belongs_to
 - user
 
 
@@ -108,15 +108,15 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### has_many
+##### has_many
 - replies
 - approvals
 - disapprovals
 
-#### belongs_to
+##### belongs_to
 - scrapbook
 
-#### picture_uploader
+##### picture_uploader
 - picture
 
 
@@ -124,7 +124,7 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### belongs_to
+##### belongs_to
 - user
   - admirer
 
@@ -133,6 +133,6 @@ SCHEMA OUTLINE
 
 ### Relationships
 
-#### belongs_to
+##### belongs_to
 - user
   - admirer

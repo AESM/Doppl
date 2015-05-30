@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  root 'updates#index'
+  root "updates#index"
 
 end

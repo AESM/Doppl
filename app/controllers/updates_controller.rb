@@ -29,7 +29,7 @@ class UpdatesController < ApplicationController
 
     respond_to do |format|
       if @update.save
-        format.html { redirect_to @update, notice: 'Update was successfully created.' }
+        format.html { redirect_to @update, notice: "Update was successfully created." }
         format.json { render :show, status: :created, location: @update }
       else
         format.html { render :new }

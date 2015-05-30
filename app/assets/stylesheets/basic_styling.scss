@@ -112,6 +112,10 @@ section {
   margin-top: 30px;
 }
 
-.copyright {
+.copyright, .ops {
   list-style-type: none;
+}
+
+.ops {
+  color: #000000;
 }

@@ -1,20 +1,20 @@
 
 <div class="signin">
-<% provide(:title, 'Sign in') %>
+<% provide(:title, "Sign in") %>
   <div class="authform loginform">
-    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :id => 'login-form'}) do |f| %>
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :id => "login-form"}) do |f| %>
       <h3>Sign in</h3>
       <%= devise_error_messages! %>
 
       <div class="form-group">
-        <%= f.input :email, :required => true, :autofocus => true, class: 'form-control' %>
+        <%= f.input :email, :required => true, :autofocus => true, class: "form-control" %>
 
-        <%= f.input :password, :required => true, :autocomplete => 'off', class: 'form-control' %>
+        <%= f.input :password, :required => true, :autocomplete => "off", class: "form-control" %>
       </div>
 
       <div class="form-group">
         <%- if devise_mapping.recoverable? %>
-          <%= link_to "Forgot password?", new_password_path(resource_name), class: 'right' %>
+          <%= link_to "Forgot password?", new_password_path(resource_name), class: "right" %>
         <% end -%>
       </div>
 
@@ -29,7 +29,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.submit 'Sign in', :class => 'button right' %>
+        <%= f.submit "Sign in", :class => "button right" %>
       </div>
     <% end %>
   </div>

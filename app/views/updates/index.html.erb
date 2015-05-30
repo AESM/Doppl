@@ -4,32 +4,34 @@
   <hr>
 
   <div class="update">
-  <% @updates.each do |u| %>
+    <% @updates.each do |u| %>
     <div class="update-topper panel">
       <h5><%= u.user.profile_name %>:</h5>
+      <%= "Posted " + time_ago_in_words(u.created_at) + " ago" %>
+
       <p class="panel callout radius"><%= u.content %></p>
     </div>
 
-    <div class="options button-bar">
-      <ul class="button-group">
-        <li class="callout button tiny round">
-          <%= link_to "Posted " + time_ago_in_words(u.created_at) + " ago", u %>
+    <div class="options">
+      <ul class="ops sub-nav">
+        <li class="warning label radius">
+          <%= link_to "Show", u %>
         </li>
-        <li class="admin button tiny round">
-          <%= link_to 'Edit', edit_update_path(u) %>
+        <li class="admin secondary label radius">
+          <%= link_to "Edit", edit_update_path(u) %>
         </li>
-        <li class="admin button tiny round">
-          <%= link_to 'Destroy', u, method: :DELETE, data: { confirm: 'Are you sure?' } %>
+        <li class="admin alert label radius">
+          <%= link_to "Destroy", u, method: :DELETE, data: { confirm: "Are you sure?" } %>
         </li>
       </ul>
     </div>
-  <% end %>
+    <% end %>
   </div>
 
   <br><br><br>
 
   <div class="button tiny round">
-    <%= link_to 'Post New Update', new_update_path %>
+    <%= link_to "Post New Update", new_update_path %>
   </div>
 
 <% else %>

@@ -1,27 +1,29 @@
 
-<p>
-  <strong><%= @update.user.profile_name %></strong> –
-  <em><%= @update.user.full_name %></em>:
-  <%= time_ago_in_words(@update.created_at) + " ago" %>
-</p>
+<div class="update">
+  <div class="update-topper panel">
+  <h5><%= @update.user.profile_name %> –
+  <em><%= @update.user.full_name %></em>:</h5>
+  <%= "Posted " + time_ago_in_words(@update.created_at) + " ago" %>
 
-<p>
-  <strong>Content:</strong>
-  <%= @update.content %>
-</p>
+  <p class="panel callout radius"><%= @update.content %></p>
+  </div>
+</div>
 
 <div class="button-bar">
   <ul class="button-group">
     <li class="button tiny round">
-      <%= link_to 'Back', updates_path %>
+      <%= link_to "Back", updates_path %>
     </li>
     <% if signed_in? && @update.user == current_user %>
     <li class="button tiny round">
-      <%= link_to 'Edit', edit_update_path(@update) %>
+      <%= link_to "Edit", edit_update_path(@update) %>
     </li>
     <li class="button tiny round">
-      <%= link_to 'Destroy', @update, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to "Destroy", @update, method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
     <% end %>
   </ul>
 </div>
+
+
+
