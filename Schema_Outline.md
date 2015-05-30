@@ -5,7 +5,7 @@ SCHEMA OUTLINE
 
 ## user/users
 
-### Relationships
+#### Relationships
 
 ##### has_many
 - connections
@@ -23,7 +23,7 @@ SCHEMA OUTLINE
 
 ## profile/profiles
 
-### Relationships
+#### Relationships
 
 ##### has_one
 - profilePhoto
@@ -34,7 +34,7 @@ SCHEMA OUTLINE
 
 ## profilePhoto/profilePhotos
 
-### Relationships
+#### Relationships
 
 ##### belongs_to
 - profile
@@ -45,7 +45,7 @@ SCHEMA OUTLINE
 
 ## connection/connections
 
-### Relationships
+#### Relationships
 
 ##### belongs_to
 - user
@@ -56,7 +56,7 @@ SCHEMA OUTLINE
 
 ## update/updates
 
-### Relationships
+#### Relationships
 
 ##### has_many
 - replies
@@ -72,7 +72,7 @@ SCHEMA OUTLINE
 
 ## reply/replies
 
-### Relationships
+#### Relationships
 
 ##### has_many
 - approvals
@@ -87,7 +87,7 @@ SCHEMA OUTLINE
 
 ## tiding/tidings
 
-### Relationships
+#### Relationships
 
 ##### belongs_to
 - user
@@ -95,7 +95,7 @@ SCHEMA OUTLINE
 
 ## scrapbook/scrapbooks
 
-### Relationships
+#### Relationships
 
 ##### has_many
 - pictures
@@ -106,7 +106,7 @@ SCHEMA OUTLINE
 
 ## picture/pictures
 
-### Relationships
+#### Relationships
 
 ##### has_many
 - replies
@@ -122,7 +122,7 @@ SCHEMA OUTLINE
 
 ## approval/approvals
 
-### Relationships
+#### Relationships
 
 ##### belongs_to
 - user
@@ -131,7 +131,7 @@ SCHEMA OUTLINE
 
 ## disapproval/disapprovals
 
-### Relationships
+#### Relationships
 
 ##### belongs_to
 - user
