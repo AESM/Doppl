@@ -4,8 +4,8 @@
   <h2>Update Feed</h2>
   <hr>
 
-  <div class="button tiny round">
-    <%= link_to "Post New Update", new_update_path %>
+  <div class="post-new">
+    <%= link_to "Post New Update", new_update_path, class: "button tiny round" %>
   </div>
 
   <div class="update">
@@ -19,14 +19,14 @@
 
     <div class="options">
       <ul class="ops sub-nav">
-        <li class="warning label radius">
-          <%= link_to "Show", u %>
+        <li>
+          <%= link_to "Show", u, class: "warning tiny button radius" %>
         </li>
-        <li class="admin secondary label radius">
-          <%= link_to "Edit", edit_update_path(u) %>
+        <li class="admin">
+          <%= link_to "Edit", edit_update_path(u), class: "secondary tiny button radius" %>
         </li>
-        <li class="admin alert label radius">
-          <%= link_to "Destroy", u, method: :DELETE, data: { confirm: "Are you sure?" } %>
+        <li class="admin">
+          <%= link_to "Destroy", u, method: :DELETE, data: { confirm: "Are you sure?" }, class: "alert tiny button radius" %>
         </li>
       </ul>
     </div>
@@ -37,12 +37,8 @@
 
   <br>
   <div class="row">
-    <div class="button large radius small-centered columns">
-      <%= link_to "Sign In", new_user_session_path %>
-    </div>
-    <div class="button large radius small-centered columns">
-      <%= link_to "Join Us", new_user_registration_path %>
-    </div>
+    <%= link_to "Sign In", new_user_session_path, class: "button radius small-centered columns" %>
+    <%= link_to "Join Us", new_user_registration_path, class: "button radius small-centered columns" %>
   </div>
 <% end %>
 </div>

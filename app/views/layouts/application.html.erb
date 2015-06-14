@@ -17,13 +17,14 @@
   <body class="<%= "#{params[:controller].gsub("devise/", "") }" %>">
     <div class="container">
       <%= render "layouts/navigation" %>
+      <%= render "layouts/messages" %>
     </div>
 
     <div class="wrapper">
-    <%- if user_signed_in? %>
-      <%= render "layouts/messages" %>
-    <% end -%>
-    <%= yield %>
+      <%- if user_signed_in? %>
+      <% end -%>
+
+      <%= yield %>
     </div>
     <%= render "layouts/footer" %>
   </body>

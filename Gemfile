@@ -50,8 +50,6 @@ gem 'fog', '1.30.0'
 gem 'font-awesome-sass-rails'
 ## Use Foundation in Rails apps
 gem 'foundation-rails', '~> 5.5.2.1'
-## Integrates Foundation's pagination styles with will_paginate
-gem 'will_paginate-foundation'
 ## A templating engine designed to make writing HTML documents easier
 # gem 'haml'
 ## Makes consuming RESTful web services easy
@@ -78,6 +76,8 @@ gem 'simple_form', '~> 3.1.0'
 gem 'state_machine', '~> 1.2.0'
 ## API for paginating queries and helpers that render pagination links
 gem 'will_paginate', '~> 3.0.7'
+## Integrates Foundation's pagination styles with will_paginate
+gem 'will_paginate-foundation'
 
 group :development, :test do
   ## Call in the code to stop execution and get a debugger console

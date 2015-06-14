@@ -4,8 +4,8 @@
   <h2>Show Update</h2>
   <hr>
 
-  <div class="button tiny round">
-    <%= link_to "Back", updates_path %>
+  <div class="back">
+    <%= link_to "Back", updates_path, class: "button tiny round" %>
   </div>
 
   <div class="update">
@@ -21,12 +21,12 @@
   <div class="options">
     <ul class="ops sub-nav">
       <% if signed_in? && @update.user == current_user %>
-      <li class="admin secondary label radius">
-        <%= link_to "Edit", edit_update_path(@update) %>
-      </li>
-      <li class="admin alert label radius">
-        <%= link_to "Destroy", @update, method: :delete, data: { confirm: "Are you sure?" } %>
-      </li>
+        <li class="admin">
+          <%= link_to "Edit", edit_update_path(@update), class: "warning tiny button radius" %>
+        </li>
+        <li class="admin">
+          <%= link_to "Destroy", @update, method: :delete, data: { confirm: "Are you sure?" }, class: "alert tiny button radius" %>
+        </li>
       <% end %>
     </ul>
   </div>

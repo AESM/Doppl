@@ -1,3 +1,4 @@
+
 class Update < ActiveRecord::Base
   ## Relationships
   belongs_to :user
