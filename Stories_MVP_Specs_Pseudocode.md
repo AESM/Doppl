@@ -1,9 +1,9 @@
-<!-- Stories_MVP_Pseudocode.md -->
+<!-- Stories_MVP_Specs_Pseudocode.md -->
 
-USER STORIES, MVP, & PSEUDOCODE
+User Stories, MVP, Specifications, & Pseudocode
 ==========================================================================
 
-### User Stories
+## User Stories
 1. Users can create a profile
   - Profile includes name and photo
 2. Users can login
@@ -18,19 +18,21 @@ USER STORIES, MVP, & PSEUDOCODE
 9. Users can send messages to other users
 10. Users can read and reply to messages
 
+--------------------------------------------------------------------------
 
+## MVP
 
-### MVP
 - Sign up and create profile
 - Login
 - Send connection request
 - Accept connection request
 - Make post
 
+--------------------------------------------------------------------------
 
+## Additional
 
-### Pseudocode
-###### TECHNOLOGIES:
+### Technologies:
 - Back-End
   - Rails
 - Front-End
